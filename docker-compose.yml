@@ -1,17 +1,17 @@
-version: '2'
+version: "2"
 services:
-  python-app:
-    image: kammana/python-app:7
-    container_name: python
-    ports:
-     - "8090:5000"
-    networks:
-      - javahome-app
-  redis:
-    container_name: redis
-    image: "redis"
-    networks:
-      - javahome-app
+ python-app:
+   image: madouk/python-app:0.1
+   container_name: python1
+   ports:
+    - "8087:5000"
+   networks:
+     - cbridge
+ redis:
+   container_name: redis1
+   image: redis
+   networks:
+     - cbridge
 networks:
-  javahome-app:
-    driver: bridge
+ cbridge:
+   driver: bridge
