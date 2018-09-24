@@ -4,7 +4,7 @@ services:
     image: kammana/python-app:7
     container_name: python
     ports:
-     - "8080:5000"
+     - "8090:5000"
     networks:
       - javahome-app
   redis:
